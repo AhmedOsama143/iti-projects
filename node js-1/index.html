@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Node.js Multi-Response Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <h1>hello from home node.js</h1>
+
+
+
+    <h2>1- Image</h2>
+    <img src="/assets/rain.jpg" alt="Rain" width="320" />
+
+    <h2>2- Video</h2>
+    <video src="/assets/rain.mp4" controls width="480"></video>
+
+
+
+    <h2>6) JSON (API)</h2>
+    <pre id="json">...loading</pre>
+
+    <script>
+        fetch('/api')
+            .then(r => r.json())
+            .then(d => {
+                document.getElementById('json').textContent = JSON.stringify(d, null, 2);
+            })
+            .catch(err => {
+                document.getElementById('json').textContent = 'Error: ' + err.message;
+            });
+    </script>
+</body>
+
+</html>
