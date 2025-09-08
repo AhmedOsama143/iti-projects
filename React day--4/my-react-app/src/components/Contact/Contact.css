@@ -1,0 +1,64 @@
+#contact {
+  background-color: #f8f9fa;
+  padding: 100px 0;
+}
+
+.text-color {
+  color: #2c3e50;
+}
+
+#contact #line {
+  width: 80px;
+  height: 4px;
+  background-color: #2c3e50;
+  margin: 0 10px;
+}
+
+#contact .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #777;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#contact .input-container {
+  position: relative;
+}
+
+#contact input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#contact #userName:focus + label[for="userName"] {
+  top: -20px;
+  font-size: 12px;
+  color: #2c3e50;
+  opacity: 1;
+}
+
+#contact #userAge:focus + label[for="userAge"] {
+  top: -20px;
+  font-size: 12px;
+  color: #2c3e50;
+  opacity: 1;
+}
+
+#contact #userEmail:focus + label[for="userEmail"] {
+  top: -20px;
+  font-size: 12px;
+  color: #2c3e50;
+  opacity: 1;
+}
+
+#contact #userPass:focus + label[for="userPass"] {
+  top: -20px;
+  font-size: 12px;
+  color: #2c3e50;
+  opacity: 1;
+}
