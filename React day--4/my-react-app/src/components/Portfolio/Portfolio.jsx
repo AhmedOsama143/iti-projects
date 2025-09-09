@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
 export default function Portfolio() {
@@ -21,10 +22,6 @@ export default function Portfolio() {
 
     fetchProducts();
   }, []);
-
-  function previewImg(src) {
-    setPreviewSrc(src);
-  }
 
   function closeImg() {
     setPreviewSrc(null);
@@ -54,21 +51,24 @@ export default function Portfolio() {
           <div className="row g-4 mt-3">
             {products.map((product) => (
               <div key={product.id} className="col-md-6 col-lg-4">
-                <div
-                  className="card overflow-hidden rounded-3 position-relative"
-                  onClick={() => previewImg(product.image)}
-                >
+                <div className="card overflow-hidden rounded-3 position-relative">
                   <img
                     src={product.image}
                     className="product-img"
                     alt={product.title}
                   />
-                  <div className="overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                    <i className="fa fa-solid fa-plus fa-5x text-white"></i>
+                  <div className="p-3 text-center">
+                    <h5>{product.title}</h5>
+                    <p className="text-muted">${product.price}</p>
+
+                    <Link
+                      to={`/product/${product.id}`}
+                      className="btn btn-primary"
+                    >
+                      Show More
+                    </Link>
                   </div>
                 </div>
-                <h5 className="mt-2 text-center">{product.title}</h5>
-                <p className="text-center text-muted">${product.price}</p>
               </div>
             ))}
           </div>
