@@ -1,0 +1,38 @@
+:root {
+  --navbg: #322e2e;
+  --whitecl: #ffffff;
+}
+
+.nav {
+  background-color: var(--navbg);
+}
+
+.nav ul li a {
+  color: var(--whitecl);
+}
+.w-35 {
+  width: 35%;
+}
+.main-background,
+.company,
+.perspiciatis {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+}
+
+.main-background {
+  background-image: url(assets/Rectangle.png);
+  height: 100vh;
+}
+
+.company {
+  background-image: url(assets/Rectangle\ \(1\).png);
+  height: 280px;
+}
+
+.perspiciatis {
+  background-image: url(assets/Rectangle\ \(3\).png);
+  height: 200px;
+}
