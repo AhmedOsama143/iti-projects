@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Task 1</title>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <button class="active" data-tab="all">All Tabs</button>
+        <button data-tab="1">Tab one</button>
+        <button data-tab="2">Tab two</button>
+        <button data-tab="3">Tab three</button>
+        <button data-tab="4">Tab four</button>
+    </div>
+
+    <div class="heading">
+        <h4 data-content="1">Tab 1</h4>
+        <h4 data-content="2">Tab 2</h4>
+        <h4 data-content="3">Tab 3</h4>
+        <h4 data-content="4">Tab 4</h4>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(".tabs button").click(function () {
+            $(".tabs button").removeClass("active");
+            $(this).addClass("active");
+
+            let tab = $(this).data("tab");
+
+            if (tab === "all") {
+                $(".heading h4").addClass("current");
+            } else {
+                $(".heading h4").removeClass("current");
+                $(`.heading h4[data-content='${tab}']`).addClass("current");
+            }
+        });
+
+        $(".heading h4").addClass("current");
+    </script>
+</body>
+
+</html>

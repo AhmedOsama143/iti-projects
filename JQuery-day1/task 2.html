@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>Task 2</title>
+</head>
+
+<body>
+
+  <div class="todo-container">
+    <h2>To-Do List</h2>
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter a new task">
+      <button id="addTask">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#addTask").click(function () {
+        let taskText = $("#taskInput").val().trim();
+        if (taskText !== "") {
+          $("#taskList").append(
+            `<li class="listitem">${taskText} <button class="delete">Delete</button></li>`
+          );
+          $("#taskInput").val("");
+        }
+      });
+
+      $(document).on("click", ".delete", function () {
+        $(this).closest(".listitem").remove();
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

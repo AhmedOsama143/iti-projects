@@ -1,0 +1,62 @@
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 10px 25px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background: #eaeaea;
+}
+
+.tabs .active {
+  background-color: #636363;
+  color: #fff;
+  border: 1px solid #201f1f;
+}
+
+.heading {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heading h4 {
+  background-color: #636363;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.heading h4.current {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
