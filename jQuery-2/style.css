@@ -1,0 +1,102 @@
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sidebar h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin: 15px 0;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#toggle-icon {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  right: -40px;
+  width: 40px;
+  height: 100%;
+  background: #c13c03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#toggle-icon:hover {
+  background: #c13c03;
+}
+
+.blog_all {
+  margin: 50px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+#posts {
+  display: grid;
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #c13c03;
+}
+
+#loadMore {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  background: #c13c03;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#loadMore:hover {
+  background: #c13c03;
+}
